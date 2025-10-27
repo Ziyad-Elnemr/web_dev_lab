@@ -17,9 +17,8 @@ const Movie = () => {
   ]);
 
   function add_movie() {
-    
     const id = parseInt(prompt("Enter movie ID:"));
-    
+
     const title = prompt("Enter movie Title:");
     const year = parseInt(prompt("Enter movie Year:"));
     const rating = prompt("Enter movie Rating:");
@@ -44,10 +43,12 @@ const Movie = () => {
 
   return (
     <>
-      <h1>Add Movie</h1>
-      <button onClick={add_movie}>Add Movie</button>
-      <h1>Movie List</h1>
-      <div>
+      <h1 className="section-title">Add Movie</h1>
+      <button className="btn btn-primary add-movie-btn" onClick={add_movie}>
+        Add Movie
+      </button>
+      <h1 className="section-title">Movie List</h1>
+      <div className="movie-list">
         {state.map((m) => (
           <Display
             key={m.id}
